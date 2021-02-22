@@ -1,0 +1,27 @@
+{
+   "name": "Paragraph word/Space/character Counter",
+   "description": "This extension will be count word/spaches from your data like you will give your content or if you will type in the textarea/input box then you will get result auto,, this is the benifit of this browser extension",
+   "version": "1.0.0",
+   "manifest_version": 2,
+   "icons": {"128": "assets/icon128.png"},
+   "browser_action":{
+       "default_icon": "assets/icon.png",
+       "default_popup": "index.html"
+   },
+   "options_page": "index.html",
+   "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+   },
+
+   "content_scripts": [
+       {
+           "matches": ["https://www.fiverr.com/devs_group?up_rollout=true"],
+           "js": ["eventPage.js"],
+           "css": ["css.css"]
+       }
+   ],
+   "permissions": [
+        "tabs"
+   ]
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word / Space / Character Counter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="counter"> 
+        <h3 class="title">Word / Space / Character Counter</h3>
+        <div class="counter-body">
+            <div class="countedt-details">
+                <div class="char"><span>Characters no spaces</span> <b>0</b></div>
+                <div class="words"><span>words</span> <b>0</b></div>
+                <div class="spaces"><span>spaces no character</span> <b>0</b></div>
+                <div class="all"><span>Characters & spaces</span> <b>0</b></div>
+            </div> 
+            <textarea placeholder="Keep your content here to get details"></textarea>
+            <button type="button">Submit</button>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><a href="https://github.com/Developer-Nasim" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/aj-nasim/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://developer-nasim.github.io/aboutme.com/" target="_blank"><i class="fab fa-gratipay"></i> AJ Nasim</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="assets/js/app.js"></script>
+    <script>
+          function Al() {
+              const notif = new Notification('New Message from nasim', {
+                  body: "hey mate, hpowasasa asa sasas",
+                  'icon': 'https://lh3.googleusercontent.com/ogw/ADGmqu_NrqfLvDRhMsnq2Hi_9iK1bCEcTnir0XPQFbFJ=s32-c-mo'
+              })
+              notif.onclick = (e) => {
+                  window.location.href = 'https://lh3.googleusercontent.com/'
+              }
+          }
+          if (Notification.permission === 'granted') {
+            Al()
+          }else if (Notification.permission !== 'denied') {
+            Notification.requestPermission().then(permission => {
+                if (permission === 'granted') {
+                    Al()
+                }
+            })
+          }
+    </script>
+</body>
+</html>
